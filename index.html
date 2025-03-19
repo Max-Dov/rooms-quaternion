@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rooms</title>
+    <style>
+        body {
+            margin: 0;
+            background: darkgray;
+        }
+        .button-containers, .stats {
+            display: flex;
+            position: absolute;
+            bottom: 1rem;
+            gap: 1rem;
+            width: 100%;
+            justify-content: center;
+        }
+        .stats {
+            bottom: 5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+        button {
+            padding: 0.25rem 0.5rem ;
+            font-size: 1.5rem;
+            border-radius: 0.25rem;
+            border: 2px solid #2E3138;
+            color: white;
+            background-color: #25272D;
+            transition: 100ms;
+        }
+        button:focus {
+            background-color: #2E3038;
+        }
+        button:active {
+            background-color: #373A43;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="stats">
+      <div>Triangle: <span id="triangle-stat"></span></div>
+      <div>Square: <span id="square-stat"></span></div>
+      <div>T-Shape: <span id="tshape-stat"></span></div>
+    </div>
+    <div class="button-containers">
+      <button onclick="refreshRooms()">
+         Next 🏠!
+      </button>
+      <button onclick="nextWallAlign()">
+        Re-align 📐!
+      </button>
+    </div>
+    <script type="module" src="data-utils.js"></script>
+    <script type="module" src="threejs-utils.js"></script>
+    <script type="module" src="threejs-setup.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
